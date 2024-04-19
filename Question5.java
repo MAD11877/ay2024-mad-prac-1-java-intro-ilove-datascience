@@ -25,9 +25,16 @@ public class Question5
      *     2
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
-     
+    public interface List<E> extends Collection<E> ;
     Scanner in = new Scanner(System.in);
-    int times = in.
+    int times = in.nextint();
+    List<int> list = new ArrayList<int> (); 
+    for (int i =0; i<times; i++)
+      {
+        int number= in.nextint();
+        list.add(number)        
+      }
+    
     
   }
 }

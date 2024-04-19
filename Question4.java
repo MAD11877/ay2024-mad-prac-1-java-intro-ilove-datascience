@@ -1,3 +1,4 @@
+
 import java.util.Scanner;
 
 public class Question4
@@ -18,6 +19,7 @@ public class Question4
      */
      
     Scanner in = new Scanner(System.in);
+    int num = in.
     
   }
 }

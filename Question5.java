@@ -34,6 +34,13 @@ public class Question5
         int number= in.nextint();
         list.add(number)        
       }
+    for(int i =0; i<(list.length-1);i++)
+      {
+        int element = list.get(i)
+
+        
+      }
+
     
     
   }

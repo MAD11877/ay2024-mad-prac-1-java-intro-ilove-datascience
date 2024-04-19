@@ -27,6 +27,7 @@ public class Question5
      */
      
     Scanner in = new Scanner(System.in);
+    int times = in.
     
   }
 }

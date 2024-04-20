@@ -25,38 +25,31 @@ public class Question5
      *     2
      * Hint: Use a loop to get input. Use another 2 loops to find the mode
      */
-    public interface List<E> extends Collection<E> ;
-    Scanner in = new Scanner(System.in);
-    int times = in.nextint();
-    List<int> list = new ArrayList<int> (); 
-    Map<int,int> map = new HashMap<int,int>();
-    for (int i =0; i<times; i++)
-      {
-        int number= in.nextint();
-        if (list.contains(number=true))
-        {
-          int value =map.get(number);
-          map.set(number,value+1);
-        }
-        else 
-        {
-          map.put(number, 1);
-        }
-        list.add(number);
-      }
-    int repeat1 =0;
-    for(int i =0; i<(list.length-1);i++)
-      {
-        int element = list.get(i);
-        int repeat = map.get(element);
-        if (repeat>repeat1)
-        {
-          repeat1=repeat;
-        }
-      }
-    System.out.println(repeat1);
+         Scanner in = new Scanner(System.in);
+        int times = in.nextInt();
+        List<Integer> list = new ArrayList<Integer>();
+        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 
-    
-    
-  }
+        for (int i = 0; i < times; i++) {
+            int number = in.nextInt();
+            list.add(number);
+            if (map.containsKey(number)) {
+                int value = map.get(number);
+                map.put(number, value + 1);
+            } else {
+                map.put(number, 1);
+            }
+        }
+
+        int maxCount = 0;
+        int mode = 0;
+        for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
+            int count = entry.getValue();
+            if (count > maxCount) {
+                maxCount = count;
+                mode = entry.getKey();
+            }
+        }
+
+        System.out.println(mode);
 }

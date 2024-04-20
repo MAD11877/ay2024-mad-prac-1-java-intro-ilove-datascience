@@ -19,7 +19,7 @@ public class Question4
      */
      
     Scanner in = new Scanner(System.in);
-    int num = in.nextint();
+    int num = in.nextInt();
     int count =0;
     while (num >= 1)
       {
